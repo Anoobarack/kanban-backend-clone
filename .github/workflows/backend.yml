@@ -1,0 +1,23 @@
+name: Backend CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build backend image
+        run: docker build -t backend .
+
+      - name: Restart backend container
+        run: |
+          cd "/home/igolovkodev/aston course git/igolovkodev-aston_devops_10/task8"
+          docker compose up -d --force-recreate backend
