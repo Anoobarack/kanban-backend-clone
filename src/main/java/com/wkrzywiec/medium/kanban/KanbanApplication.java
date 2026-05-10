@@ -12,7 +12,7 @@ public class KanbanApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KanbanApplication.class, args);
-		System.out.println("Backend CI/CD demo build is running");
+		System.out.println("Hello hello");
 	}
 
 }
