@@ -19,5 +19,5 @@ jobs:
 
       - name: Restart backend container
         run: |
-          cd "/home/igolovkodev/aston course git/igolovkodev-aston_devops_10/task8"
+          cd "/home/igolovkodev/aston course git/igolovkodev-aston_devops_10/task7"
           docker compose up -d --force-recreate backend
